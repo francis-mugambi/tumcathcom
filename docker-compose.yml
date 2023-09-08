@@ -1,0 +1,7 @@
+version: '3.4'
+services:
+  django:
+    image: tumyca:1.0
+    build: .   
+    ports:
+      - "8000:8000"

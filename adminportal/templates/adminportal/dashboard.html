@@ -1,0 +1,325 @@
+{%  extends 'adminportal/base.html' %}   
+{% load static %}
+{% block title %}Dashboard{% endblock %}
+
+
+ {% block content %} 
+      <div class="page-wrapper">
+        
+        <div class="page-breadcrumb">
+          <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+              <h4 class="page-title">Dashboard</h4>
+              <div class="ms-auto text-end">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#"></a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+        <div class="container-fluid">          
+          <div class="row">
+            <!-- Column -->
+            <div class="col-md-6 col-lg-4 col-xlg-3">
+              <a href="{% url 'members' %}"><div class="card card-hover">
+                <div class="box bg-success text-center">                                
+                  <h1 class="font-light text-white">
+                    {{registered}}
+                    <i class="mdi mdi-chart-areaspline"></i>
+                  </h1>
+                  <h6 class="text-white">Total Registered Members</h6>
+                </div>
+              </div></a>
+            </div>       
+            <!-- Column -->
+            <div class="col-md-6 col-lg-4 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-success text-center">                                
+                  <h1 class="font-light text-white">
+                    {{approved}}
+                    <i class="mdi mdi-chart-areaspline"></i>
+                  </h1>
+                  <h6 class="text-white">Approved Members</h6>
+                </div>
+              </div>
+            </div>            
+            <!-- Column -->
+            <div class="col-md-6 col-lg-4 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-success text-center">
+                  <h1 class="font-light text-white">
+                    {{nonapproved}}
+                    <i class="mdi mdi-chart-areaspline"></i>
+                  </h1>
+                  <h6 class="text-white">Non Approved Member(s)</h6>
+                </div>
+              </div>
+            </div>  
+             <!-- Column -->
+            <div class="col-md-6 col-lg-4 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-success text-center">
+                  <h1 class="font-light text-white">
+                    {{men}}
+                    <i class="mdi mdi-chart-areaspline"></i>
+                  </h1>
+                  <h6 class="text-white">Total Men</h6>
+                </div>
+              </div>
+            </div>  
+             <!-- Column -->            
+             <div class="col-md-6 col-lg-4 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-success text-center">
+                  <h1 class="font-light text-white">
+                    {{ladies}}
+                    <i class="mdi mdi-chart-areaspline"></i>
+                  </h1>
+                  <h6 class="text-white">Total Ladies</h6>
+                </div>
+              </div>
+            </div>  
+             <!-- Column -->
+             <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-danger text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{year6}}</span>
+                    <i class="mdi mdi-receipt"></i>
+                  </h1>
+                  <h6 class="text-white">Year 6 Members</h6>
+                </div>
+              </div>
+            </div>        
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-danger text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{year5}}</span>
+                    <i class="mdi mdi-receipt"></i>
+                  </h1>
+                  <h6 class="text-white">Year 5 Members</h6>
+                </div>
+              </div>
+            </div>        
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-danger text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{year4}}</span>
+                    <i class="mdi mdi-receipt"></i>
+                  </h1>
+                  <h6 class="text-white">Year 4 Members</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-danger text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{year3}}</span>
+                    <i class="mdi mdi-receipt"></i>
+                  </h1>
+                  <h6 class="text-white">Year 3 Members</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-danger text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{year2}}</span>
+                    <i class="mdi mdi-receipt"></i>
+                  </h1>
+                  <h6 class="text-white">Year 2 Members</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-danger text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{year1}}</span>
+                    <i class="mdi mdi-receipt"></i>
+                  </h1>
+                  <h6 class="text-white">Year 1 Members</h6>
+                </div>
+              </div>
+            </div>            
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-cyan text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{st_agnes}}</span>
+                    <i class="mdi mdi-view-dashboard"></i>
+                  </h1>
+                  <h6 class="text-white">ST. Agnes Members</h6>
+                </div>
+              </div>
+            </div>         
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-cyan text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{st_catherine}}</span>
+                    <i class="mdi mdi-view-dashboard"></i>
+                  </h1>
+                  <h6 class="text-white">ST. Catherine Members</h6>
+                </div>
+              </div>
+            </div>     
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-cyan text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{st_charles}}</span>
+                    <i class="mdi mdi-view-dashboard"></i>
+                  </h1>
+                  <h6 class="text-white">ST. Charles Members</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-cyan text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{st_dominic}}</span>
+                    <i class="mdi mdi-view-dashboard"></i>
+                  </h1>
+                  <h6 class="text-white">ST. Dominic Members</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-cyan text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{st_joseph}}</span>
+                    <i class="mdi mdi-view-dashboard"></i>
+                  </h1>
+                  <h6 class="text-white">ST. Joseph Members</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-cyan text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{st_jude}}</span>
+                    <i class="mdi mdi-view-dashboard"></i>
+                  </h1>
+                  <h6 class="text-white">ST. Jude Members</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-cyan text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{st_lucy}}</span>
+                    <i class="mdi mdi-view-dashboard"></i>
+                  </h1>
+                  <h6 class="text-white">ST. Lucy Members</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-cyan text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{st_michael}}</span>
+                    <i class="mdi mdi-view-dashboard"></i>
+                  </h1>
+                  <h6 class="text-white">ST. Michael Members</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-cyan text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{no_family}}</span>
+                    <i class="mdi mdi-view-dashboard"></i>
+                  </h1>
+                  <h6 class="text-white">Members without a Family</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-info text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{degree}}</span>
+                    <i class="mdi mdi-blur-linear"></i>
+                  </h1>
+                  <h6 class="text-white">Members Parsuing Degree</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-info text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{diploma}}</span>
+                    <i class="mdi mdi-blur-linear"></i>
+                  </h1>
+                  <h6 class="text-white">Members Parsuing Diploma</h6>
+                </div>
+              </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-6 col-lg-2 col-xlg-3">
+              <div class="card card-hover">
+                <div class="box bg-info text-center">
+                  <h1 class="font-light text-white">
+                    <span>{{certificate}}</span>
+                    <i class="mdi mdi-blur-linear"></i>
+                  </h1>
+                  <h6 class="text-white">Members Parsuing Certificate</h6>
+                </div>
+              </div>
+            </div>
+            <!-- column -->
+            <div class="col-lg-12">
+              <h4 class="card-title">Messages from Contact Us Form</h4><hr>
+              {% for message in messages %}
+              <div class="car">                           
+                  <p><b>From:</b> {{message.name}} => <a href="mailto:{{message.email}}">{{message.email}}</a> 
+                    <a class="text-danger px-4" href="{% url 'delete-message' message.id %}">Delete</a></p>
+                    <p><b>Subject:</b> {{message.subject}}</p>   
+                    <p>{{message.message}}</p>                 
+                         
+              </div><hr>
+              {% endfor %}
+             
+              </div>
+        
+        </div>
+        </div>
+
+    {% endblock %}
+      
+        

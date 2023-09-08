@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <meta content="{% block metadescription %}{% endblock %}" name="description">
+    <meta content="{% block metakeywords %}{% endblock %}" name="keywords">
+    <meta name="robots" content="{% block index %}index,follow{% endblock %}">
+
+    <link rel="canonical" href="https://www.wrappixel.com/templates/monster-admin-lite/" />
+    <!-- Favicon icon -->
+ 
+    <!-- Custom CSS -->
+    <link href="{% static 'students/assets/plugins/chartist/dist/chartist.min.css' %}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static 'students/students-html/css/style.min.css' %}" rel="stylesheet">
+   
+</head>
+
+<body style="max-width: 700px; margin: auto;">
+    
+    {% block content %}
+
+    {% endblock %}
+            
+           
+            <!-- End footer -->
+            
+        </div>
+        
+    </div>
+   
+    <script src="/static/students/assets/plugins/jquery/dist/jquery.min.js"></script>    
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="/static/students/assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/students/students-html/js/app-style-switcher.js"></script>
+    <!--Wave Effects -->
+    <script src="/static/students/students-html/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="/static/students/students-html/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="/static/students/students-html/js/custom.js"></script>
+</body>
+
+</html>

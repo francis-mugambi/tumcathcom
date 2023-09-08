@@ -1,0 +1,56 @@
+{%  extends 'adminportal/base.html' %}   
+{% load static %}
+{% block title %}Cadidates Results{% endblock %}
+
+
+ {% block content %} 
+      <div class="page-wrapper">
+        
+        <div class="page-breadcrumb">
+          <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+              <h4 class="page-title">Cadidates results</h4>              
+              <div class="ms-auto text-end">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#"></a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                    <!-- <li><a href="{% url 'generate-csv' %}">Download CSV file</a></li>
+                    <li class="mx-4"><a href="{% url 'generate-pdf' %}">Download PDF file</a></li> -->
+                      
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <span style="color: red; font-weight:bold;">{{msg}}</span>  
+        </div><hr>
+        <div class="mx-3">
+          <a href="{% url 'authenticate-editing' %}" onclick="if(!confirm('Are you sure? If you disable editing members cannot update their details on member portal!')){return false;}">
+            <p class="btn btn-cyan p-4 text-white" title="Do not disable editing unless elections are ongoing, please also remember to enable editing after elections">           
+              {% if status.is_authenticated_editing == True %}
+              <span class="text-danger">Disable Editing Portal</span> 
+              {% elif status.is_authenticated_editing == False %}
+              <span class="text-danger">Allow Editing Portal</span> 
+              {% endif %} 
+            </p>          
+            </a>
+          <a href="{% url 'authenticate-voting' %}" onclick="if(!confirm('Are you sure? If you close voting members cannot login to the voting portal')){return false;}">
+          <p class="btn btn-cyan p-4 text-white">           
+            {% if status.is_authenticated_voting == True %}
+            <span class="text-danger">Close Voting</span> 
+            {% elif status.is_authenticated_voting == False %}
+            <span class="text-danger">Open Voting</span> 
+            {% endif %} 
+          </p>          
+          </a>    
+          <a href="{% url 'main-office-results' %}"><p class="btn btn-cyan p-4 text-white">Main Office Results </p></a>
+          <a href="{% url 'choir-office-results' %}"><p class="btn btn-cyan p-4 text-white">Choir Office Results</p></a>
+          <a href="{% url 'scc-leaders-results' %}"><p class="btn btn-cyan p-4 text-white">SCC Leaders Results</p></a>
+          <a href="{% url 'cma-cla-leaders-results' %}"><p class="btn btn-cyan p-4 text-white">CMA & CLA Results</p></a>
+        </div>
+
+    {% endblock %}
+      
+        

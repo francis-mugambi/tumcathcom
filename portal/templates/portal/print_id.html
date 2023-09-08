@@ -1,0 +1,91 @@
+{% extends "portal/base.html" %}
+{% load static %}
+{% block title %}Print id {% endblock %}
+{% block metadescription %}Print Id {% endblock %}
+{% block metakeywords %}tumcathcom id, 'tum yca id', 'tum catholic community id' {% endblock %}
+{% block head1 %}Print Id{% endblock %}
+{% block head2 %}Print Id{% endblock %}
+
+{% block content %}
+<h5>
+    {% for message in messages %}
+    <span style="color: red; font-weight:bold;">{{message}}</span><br>
+    {% endfor %}
+</h5>
+<div style="overflow-x: auto;">
+<div class="row text-center" style="width: 350px;height: 210px; background-color: rgb(83, 7, 7); border-radius: 10px; margin-left: 20px; color: antiquewhite;">
+    
+    <div class="column col-6">
+        <img src="/media/photos/tum-logo.jpg" alt="image"
+        class="rounded-circle" style="float: left; width: 50px; margin: 10px 5px 5px 3px;">
+        <p style="font-size: 9px; margin-top: 15px;">Technical University <br> of Mombasa</p>
+        <!-- <span style="font-size: 9px; margin-top: opx;">Full Name:</span> <br>
+        <span style="font-size: 9px; margin-left: 15px;">Francis Mugambi Gikunju</span> -->
+    </div>
+    <div class="column col-6">
+        <p style="font-size: 9px; margin-top: 15px;">Tumcathcom Membership   Card</p>
+        <p style="font-size: 9px; margin-top: 0px;">Serial Number: {{user.id_number}}{{user.id}}</p>
+
+    </div>
+    <div class="column col-6">
+        <img src="/media/{{user.photo}}" alt="image"
+        class="" style="float: left; width: 80px;height: 100px; margin: 10px 5px 5px 3px;">
+        <p style="font-size: 9px; margin-top: 15px;">Id Number: <br>{{user.id_number}} </p>
+    </div>
+    <div class="column col-6">
+               
+        <p style="font-size: 9px; margin-top: 15px;">Full Name: <br>
+            {{user.first_name}} {{user.last_name}} {{user.sir_name}}
+        </p>  
+        <div style="float: left;margin-left: -70px;">
+            <span style="font-size: 9px;">Reg No:</span>
+            <span style="font-size: 9px;">{{user.regno}}</span>
+        </div><br>
+        <div style="float: left; margin-left: -70px;">
+            <span style="font-size: 9px;">Family:</span>
+            <span style="font-size: 9px;">{{user.family}}</span>
+        </div>        
+    </div>  
+</div>
+<div class="row text-center mt-1" 
+        style="width: 350px;height: 210px; background-color:  rgb(83, 7, 7); color: antiquewhite; border-radius: 10px; margin-left: 20px;">
+   
+    <div class="col-12 pt-3">    
+        <span style="font-size: 9px;;">This is a property of Tumcathcom assigned to {{user.first_name}} <br> 
+            {{user.last_name}} {{user.sir_name}} as an identity for church matters</span><br>
+        <!-- <span style="font-size: 9px; margin-bottom: 5px;">{{user.department}}</span>            -->
+    </div>
+    <div class="col-12">
+        <span style="font-size: 9px;">{{user.department|upper}}</span><br>
+        <span style="font-size: 9px;">{{user.course_name}}</span>
+    </div>
+        
+    <div class="col-12">
+        <p style="font-size: 9px;">
+        <<<< VALID: 2023 - 2027 >>>> <br>
+        <<<< {{user.id}} >>>> <<<<{{user.id_number}}>>> <<<< {{user.regno}} >>>> <br>       
+        <<<< {{user.first_name}} >>>> <<<< {{user.last_name}} >>>> <<<< {{user.sir_name}} >>>>
+        </p>
+    </div>
+</div><br>
+</div>
+<div>
+    <span><a class="text-white btn btn-danger mx-4" href="{% url 'download-card' user.id %}">Download</a></span>
+    <span><a class="text-white btn btn-info mx-4" href="{% url 'print-card' user.id %}" target="_blank">Print</a></span>    
+   
+</div><br>
+<div>
+    {% if user.is_approved == False and user.has_request == False %}
+    <span class=" mx-4 btn btn-success"><a href="{% url 'request-approval' user.id %}">Request For Approval</a></span>
+    <span class=" mx-4"><b>Status:</b><span class="text-danger"> Not Approved</span></span>
+    {% elif user.is_approved == False and user.has_request == True %}    
+    <span class=" mx-4"><b>Status:</b><span class="text-danger"> Waiting Approval</span></span>
+    {% else %}
+    <span class=" mx-4"><b>Status:</b><span class="text-danger"> Approved</span></span><br><hr>
+    {% endif %}
+    <p class="text-info px-2"><span class="text-danger">NB:</span> The system will take about 10 seconds to generate your id after clicking the download button please be patient and <br>
+        make sure that you are connected  to a good internet connection.
+    </p>
+</div><hr>
+
+{% endblock %}

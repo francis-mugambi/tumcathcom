@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tumcathcom Member</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+
+<body>
+
+    <h1 style="background-color: brown; text-align: center; color: aliceblue;">Tumcathcom Member Details</h1>
+    <p>{{user.email}}</p>
+    <p>{{code}}</p>
+    <div id="members-container">
+
+    </div>
+
+</body>
+
+<script>
+    let membersContainer = document.getElementById('members-container')
+
+    let getMembers = async () => {
+        let response = await fetch('http://127.0.0.1:8000/api/customer/1')
+        let member = await response.json()
+
+        
+            let row = `<div>
+                            <p>${member.first_name} ${member.last_name} ${member.family}</p>
+                        </div>`
+
+            membersContainer.innerHTML += row
+       
+    }
+
+    getMembers()
+</script>
+
+</html>

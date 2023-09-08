@@ -1,0 +1,43 @@
+{%  extends 'adminportal/base.html' %}   
+{% load static %}
+{% block title %}Cadidates Results{% endblock %}
+
+
+ {% block content %} 
+      <div class="page-wrapper">
+        
+        <div class="page-breadcrumb">
+          <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+              <h4 class="page-title">Cadidates results</h4>              
+              <div class="ms-auto text-end">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#"></a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                    <!-- <li><a href="{% url 'generate-csv' %}">Download CSV file</a></li>
+                    <li class="mx-4"><a href="{% url 'generate-pdf' %}">Download PDF file</a></li> -->
+                      
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <span style="color: red; font-weight:bold;">{{msg}}</span>  
+        </div><hr>
+              <h3 class="text-center" style="border-bottom: 2px solid red;">Main Office</h3>         
+              {% for user in main_office_results %}   
+              <div class="row">                       
+                <div class="col-md-6 px-4">
+                  <p><img src="/media/{{user.cadidate_photo}}" alt="photo" width="50px" style="border-radius: 50%;">
+                     <span class="px-3">{{user.post}}</span> <span>{{user.cadidate_name}}</span>
+                      <span class="px-3">{{user.votes}}</span>                       
+                    </p> <hr>                
+                </div>
+                </div>
+              {% endfor %}
+
+    {% endblock %}
+      
+        

@@ -1,0 +1,167 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block title %}Tumcathcom Gallery Photos{% endblock %}
+{% block metadescription %}Tumcathcom Photos{% endblock %}
+{% block metakeywords %}'tum yca photos, 'tumcathcom photos' {% endblock %}
+
+{% block content %}
+
+  <!-- ======= Gallery Section ======= -->
+  <section class="portfolio" id="solar-energy">
+    <div class="row">
+      <h1 class="text-center text-danger pt-4 font-30">Gallery Photos</h1><hr>
+      <div class="section-title pt-4">
+        <h2 class="font-20">Families Photos</h2>
+      </div>
+    </div>
+      <div class=" row mx-2">
+        {% for family in families_photos %} 
+        <div class="col-lg-4 col-md-6 portfolio-item">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="/media/{{family.photo}}" class="img-fluid" alt="image" style="width: 100%;height: 100%;">
+            </figure>
+            <div class="portfolio-info">              
+              <p class="text-success">{{family.family_name}}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row">
+      <div class="section-title pt-4">
+        <h2 class="font-20">Events Photos </h2>
+      </div>
+    </div>
+    <div class="row portfolio-container mx-2">
+      {% for event in events_photos %} 
+        <div class="col-lg-4 col-md-6 portfolio-item ">
+          <div class="portfolio-wrap">
+            <figure>
+              <img src="/media/{{event.photo}}" class="img-fluid" alt="image" style="width: 100%;height: 100%;">
+            </figure>
+            <div class="portfolio-info">              
+              <p class="text-success">{{event.caption}}</p>
+            </div>
+          </div>
+        </div>    
+      {% endfor %}
+    </div>
+  </section><!-- End Gallery Section -->
+
+ {% endblock %}
+
+
+ <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+  <div class="portfolio-wrap">
+    <figure>
+      <img src="{% static 'assets/img/photos/events-photos/photo1.jpg' %}" class="img-fluid" alt="image" style="width: 100%;height: 100%;">
+    </figure>
+    <div class="portfolio-info">              
+      <p class="text-success">A charitable visit to the orphanage home, Our choir animated the mass</p>
+    </div>
+  </div>
+</div> -->
+
+ <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+  <div class="portfolio-wrap">
+    <figure>
+      <img src="{% static 'assets/img/photos/events-photos/photo2.jpg' %}" class="img-fluid" alt="image" style="width: 100%;height: 100%;">          
+    </figure>
+    <div class="portfolio-info">              
+      <p class="text-success">Tumcathcom students assembled in the assebly hall during our weekly mass.</p>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+  <div class="portfolio-wrap">
+    <figure>
+      <img src="{% static 'assets/img/photos/events-photos/photo8.jpg' %}" class="img-fluid" alt="image" style="width: 100%;height: 100%;">              
+    </figure>
+    <div class="portfolio-info">              
+      <p class="text-success">After Inter universities and Collenges (IUC) mass at Pwani University.</p>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+  <div class="portfolio-wrap">
+    <figure>
+      <img src="{% static 'assets/img/photos/events-photos/photo4.jpg' %}" class="img-fluid" alt="image" style="width: 100%;height: 100%;">
+    </figure>
+    <div class="portfolio-info">              
+      <p class="text-success">Our Chaplain with the Finalist of the year 2022</p>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+  <div class="portfolio-wrap">
+    <figure>
+      <img src="{% static 'assets/img/photos/events-photos/photo5.jpg' %}" class="img-fluid" alt="image" style="width: 100%;height: 100%;">              
+    </figure>
+    <div class="portfolio-info">              
+      <p class="text-success">Tumcathcom students voluntered for cleaning the environment around the University 
+        during the world environmental day
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+  <div class="portfolio-wrap">
+    <figure>
+      <img src="{% static 'assets/img/photos/events-photos/photo7.jpg' %}" class="img-fluid" alt="image" style="width: 100%;height: 100%;">              
+    </figure>
+    <div class="portfolio-info">              
+      <p class="text-success">The Choir before animating the mass at mikindani parish (External Mass)</p>
+    </div>
+  </div>
+</div>     
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+  <div class="portfolio-wrap">
+    <figure>
+      <img src="{% static 'assets/img/photos/events-photos/subukia.png' %}" class="img-fluid" alt="image" style="width: 100%;height: 100%;">              
+    </figure>
+    <div class="portfolio-info">              
+      <p class="text-success">Tumcathcom students at Subukia for a Prayers retreet</p>
+    </div>
+  </div>
+</div>  
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+  <div class="portfolio-wrap">
+    <figure>
+      <img src="{% static 'assets/img/photos/events-photos/nakuru.jpg' %}" class="img-fluid" alt="image" style="width: 100%;height: 100%;">              
+    </figure>
+    <div class="portfolio-info">              
+      <p class="text-success">students at Lake Nakuru National park </p>
+    </div>
+  </div>
+</div>     
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+  <div class="portfolio-wrap">
+    <figure>
+      <img src="{% static 'assets/img/photos/events-photos/finalists-men.png' %}" class="img-fluid" alt="image" style="width: 100%;height: 100%;">              
+    </figure>
+    <div class="portfolio-info">              
+      <p class="text-success">The 2022 finalist men locking in style 😲</p>
+    </div>
+  </div>
+</div>     
+
+<div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+  <div class="portfolio-wrap">
+    <figure>
+      <img src="{% static 'assets/img/photos/events-photos/choir.jpg' %}" class="img-fluid" alt="image" style="width: 100%;height: 100%;">              
+    </figure>
+    <div class="portfolio-info">              
+      <p class="text-success">Our choir members  after animating the mass within the University</p>
+    </div>
+  </div>
+</div>     
+
+</div> -->

@@ -1,0 +1,215 @@
+{% extends "portal/base.html" %}
+{% load static %}
+{% block title %}Member profile {% endblock %}
+{% block metadescription %}Tumcathcom member profile {% endblock %}
+{% block metakeywords %}tumcathcom profile, 'tum yca profile', 'tum catholic community profile' {% endblock %}
+{% block head1 %}Profile{% endblock %}
+{% block head2 %}Profile{% endblock %}
+{% block content %}
+
+            
+            <div class="container-fluid">
+               
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-lg-4 col-xlg-3 col-md-5">
+                        <div class="card">
+                            <div class="card-body profile-card">
+                                <center class="mt-4">
+                                    <div><a href="{% url 'update-profile-picture' %}">update Profile</a></div>
+                                    <img src="/media/{{user.photo}}" alt="Upload photo"
+                                        class="rounded-circle" width="150" />                                    
+                                    <h4 class="card-title mt-2">Welcome {{user.first_name}}</h4>
+                                    <h6 class="card-subtitle">{{user.email}}</h6>                                    
+                                    
+                                </center>                                
+                            </div>
+                        </div>
+                        {% for message in messages %}
+                        <span style="color: red; font-weight:bold;">{{message}}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="row">
+                    <div class="col-lg-12 col-xlg-12 col-md-12">
+                        <div class="card">
+                            <div class="card-body">                               
+                                <form class="form-horizontal form-material mx-2" action="{% url 'profile' %}" method="POST">
+                                {% csrf_token %}
+                                
+                                <div class="row">
+                                    
+                                    <div class="col-md-6 form-group">
+                                        <label class="mb-0">First Name <span class="text-danger">*</span></label>
+                                        <div class="">
+                                            <input style="border-bottom: 1px solid rgb(196, 191, 191);" type="text" name = "fname" value="{{user.first_name}}"
+                                                class="form-control ps-0 form-control-line" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class=" mb-0">Middle Name</label>
+                                        <div class="">
+                                            <input style="border-bottom: 1px solid rgb(196, 191, 191);" type="text" name = "mname" value="{{user.last_name}}"
+                                                class="form-control ps-0 form-control-line">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="mb-0">Last Name <span class="text-danger">*</span></label>
+                                        <div class="">
+                                            <input style="border-bottom: 1px solid rgb(196, 191, 191);" type="text" name = "sname" value="{{user.sir_name}}"
+                                                class="form-control ps-0 form-control-line" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label for="example-email" class="">Email <span class="text-danger">*</span></label>
+                                        <div class="">
+                                            <input type="email" name ="email" value="{{user.email}}"
+                                                class="form-control ps-0 form-control-line" style="background-color: rgb(206, 201, 201);"
+                                                id="example-email" required  readonly>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="mb-0">Phone No <span class="text-danger">*</span></label>
+                                        <div class="">
+                                            <input style="border-bottom: 1px solid rgb(196, 191, 191);" type="tel" name = "phone" value="{{user.phone}}"
+                                                class="form-control ps-0 form-control-line" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="mb-0">Id Number <span class="text-danger">*</span></label>
+                                        <div class="">
+                                            <input style="border-bottom: 1px solid rgb(196, 191, 191);" type="tel" name ="id_number" value="{{user.id_number}}"
+                                                class="form-control ps-0 form-control-line p-4" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label>Reg No <span class="text-danger">*</span></label>
+                                        <div class="border-bottom">
+                                            <input style="border-bottom: 1px solid rgb(196, 191, 191);" type="text" name = "regno" value="{{user.regno}}"
+                                                class="form-control ps-0 form-control-line" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 border-bottom form-group">
+                                        <label class="pl-4" for="year">Year of Study: <span class="text-danger">*</span></label>
+                                        <select style="width: 100%;" class="border-bottom px-4 py-2" id="year" name="year_of_study" required>
+                                            <option value="">Select</option>
+                                            <option class="text-danger" value="{{user.year_of_study}}">{{user.year_of_study}} - Selected</option>
+                                            <option value="Year 1">Year 1</option>
+                                            <option value="Year 2">Year 2</option>
+                                            <option value="Year 3">Year 3</option>
+                                            <option value="Year 4">Year 4</option>
+                                            <option value="Year 5">Year 5</option>
+                                            <option value="Year 6">Year 6</option>
+                                        </select>                                        
+                                    </div><hr>
+                                </div>
+                                    <div class="col-sm-12 border-bottom form-group">
+                                        <label class="pl-4" for="families">Family: <span class="text-danger">*</span></label>                                        
+                                        <select style="width: 100%;" class="col-sm-12 border-bottom px-4 py-2" id="families" name="family" required>                                                                            
+                                            <option value="">Select</option>
+                                            <option class="text-danger" value="{{user.family}}">{{user.family}} - Selected</option>                                                                                      
+                                            <option value="ST. Agnes">ST. Agnes</option>  
+                                            <option value="ST. Catherine">ST. Catherine</option>
+                                            <option value="ST. Charles">ST. Charles</option>
+                                            <option value="ST. Dominic">ST. Dominic</option>  
+                                            <option value="ST. Joseph">ST. Joseph</option>
+                                            <option value="ST. Jude">ST. Jude</option>
+                                            <option value="ST. Lucy">ST. Lucy</option>  
+                                            <option value="ST. Michael">ST. Michael</option>                                                                                                                                  
+                                            <option value="No Family">I am not a member of any Family</option>
+                                        </select>                                        
+                                    </div><hr>
+
+                                    <div class="form-group">
+                                        <label class="pl-4" for="cars">Department: <span class="text-danger">*</span></label>
+                                        <select style="width: 100%;" class="col-sm-12 border-bottom px-4 py-2" id="departments" name="department" required>
+                                            <option value="">Select</option>
+                                            <option class="text-danger" value="{{user.department}}">{{user.department}} - Selected</option>
+                                            <option value="Electrical and Electronic Engineering">Electrical and Electronic Engineering</option>
+                                            <option value="Mechanical Engineering">Mechanical Engineering</option>
+                                            <option value="Building and Civil Engineering">Building and Civil Engineering</option>
+                                            <option value="Mechanical and Automotive Engineering">Mechanical and Automotive Engineering</option> 
+                                            <option value="Medical Engineering">Medical Engineering</option>                                           
+                                            <option value="Architecture and Built Environment">Architecture and Built Environment</option>
+                                            <option value=" Mathematics and Physics"> Mathematics and Physics</option>
+                                            <option value=" Environment and Health Sciences"> Environment and Health Sciences</option>
+                                            <option value="Pure and Applied Sciences">Pure and Applied Sciences</option>
+                                            <option value="Applied and Health Sciences">Applied and Health Sciences</option>
+                                            <option value=" Medical Sciences"> Medical Sciences</option>
+                                            <option value="Information Technology">Information Technology</option>
+                                            <option value="Computer Science">Computer Science</option>
+                                            <option value="Information Systems">Information Systems</option>
+                                            <option value="Social Sciences">Social Sciences</option>
+                                            <option value="Communication Studies">Communication Studies</option>
+                                            <option value="Hospitality and Tourism Management">Hospitality and Tourism Management</option>
+                                            <option value="Accounting and Finance">Accounting and Finance</option>
+                                            <option value="Business Administration">Business Administration</option>
+                                            <option value="Management Science">Management Science</option>                                            
+                                            <!-- <option value="">Other</option> -->
+                                        </select><br><br>
+                                        <!-- If Other specify, otherwise leave blank: <input style="width: 100%;padding: 3px;" type="text" placeholder="Type the name of your department here" name="department"> -->
+                                        
+                                    </div><hr>
+                                <div class="row">
+                                    <div class="col-sm-6 form-group">
+                                        <label class="">Course Title <span class="text-danger">*</span></label>
+                                        <select style="width: 100%;" class="col-sm-12 border-bottom px-4 py-2" id="course_title" name="course_title" required>
+                                            <option value="">Select</option>
+                                            <option class="text-danger" value="{{user.course_title}}">{{user.course_title}} - Selected</option>
+                                            <option value="Masters">Masters</option>
+                                            <option value="Degree">Degree</option>
+                                            <option value="Diploma">Diploma</option>
+                                            <option value="Certificate">Certificate</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6 form-group">
+                                        <label>Course Name <span class="text-danger">*</span></label>
+                                        <div class="border-bottom">
+                                            <input style="border-bottom: 1px solid rgb(196, 191, 191);" type="text" name = "course_name" value="{{user.course_name}}"
+                                                class="form-control ps-0 form-control-line" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 border-bottom form-group">
+                                    <label class="pl-4" for="families">Gender: <span class="text-danger">*</span></label>                                   
+                                    <select style="width: 100%;" class="col-sm-12 border-bottom px-4 py-2" id="gender" name="gender" required>                                    
+                                        <option value="">Select</option>
+                                        <option class="text-danger" value="{{user.gender}}">{{user.gender}} - Selected</option>
+                                        <option value="Male">Male</option>  
+                                        <option value="Female">Female</option>                                         
+                                    </select>                                        
+                                </div><hr>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-12 d-flex">
+                                            {% if authenticate_editing.is_authenticated_editing == True %}
+                                            <button type="submit" style="background-color: rgb(131, 10, 10);"
+                                             class="btn mx-auto mx-md-0 text-white">Update Profile</button>
+                                            {% elif authenticate_editing.is_authenticated_editing == False %}
+                                            <button type="button" style="background-color: rgb(131, 10, 10);"
+                                             class="btn mx-auto mx-md-0 text-white">Profile Update Disabled</button>
+                                            {% endif %}
+                                            
+                                        </div>
+                                    </div>
+                                
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+              
+            </div>
+            
+{% endblock %}

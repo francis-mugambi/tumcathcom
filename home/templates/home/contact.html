@@ -1,0 +1,88 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block title %}Tumcathcom Contacts{% endblock %}
+{% block metadescription %}Tum catholic community contacts {% endblock %}
+{% block metakeywords %}'Tumcathcom contacts', 'Tum yca contacts' {% endblock %}
+
+{% block content %}
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact section-bg">
+    <div class="container">
+
+      <div class="section-title">
+        <h1 class="tum-color font-30 pt-4">CONTACT US</h1>
+        <p>Contact us through the following</p>
+      </div>
+
+      <div class="row mt-5 justify-content-center">
+
+        <div class="col-lg-10">
+
+          <div class="info-wrap">
+            <div class="row">
+              <div class="col-lg-4 info">
+                <i class="bi bi-geo-alt text-white bg-danger p-2"></i>
+                <h4>Location:</h4>
+                <p>
+                  Tom Mboya Street, <br>
+                  P.O BOX 90420-80100, <br>
+                  Mombasa, Kenya<br>
+                </p>
+              </div>
+
+              <div class="col-lg-4 info mt-4 mt-lg-0">
+                <a href="mailto:info@tumcathcom.com"><i class="bi bi-envelope text-white bg-danger p2"></i></a>
+                <h4>Email:</h4>
+                <p>
+                  <a href="mailto:info@tumcathcom.com">info@tumcathcom.com |</a>
+                  <!-- <a href="mailto: ycstum@yahoo.com"> ycstum@yahoo.com |</a> -->
+                  <a href="mailto:tumcatholiccommunity@gmail.com"> tumcatholiccommunity@gmail.com</a>
+                </p>
+              </div>
+
+              <div class="col-lg-4 info mt-4 mt-lg-0">
+                <a href="tel:+254740527047"><i class="bi bi-phone text-white bg-danger p2"></i></a>
+                <h4>Call:</h4>
+                <p><a href="tel:+254740527047">+254740 527 047</a></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="row mt-5 justify-content-center">        
+        <div class="col-lg-10">
+          {% for message in messages %}
+          <span class="px-4" style="color: red; font-weight:bold;">{{message}}</span>
+          {% endfor %}
+          <form action="" method="post" role="form" class="php-email-form">
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            </div>      
+            <div class="text-center">5 + 5 = <input  style="width: 100px;" type="text"  name="recaptcha" required> <button type="submit" name="send">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+{% endblock %}

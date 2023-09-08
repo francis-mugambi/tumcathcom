@@ -1,0 +1,157 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block title %}Karibu | Tumcathcom {% endblock %}
+{% block metadescription %}Welcome to Tum catholic community {% endblock %}
+{% block metakeywords %}tumcathcom, 'tum yca', 'tum catholic community' {% endblock %}
+
+{% block content %}
+  <!-- ======= Welcome Section ======= -->
+  <section style="border-bottom: solid rgb(105, 6, 6) 4px;" id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="container text-center text-md-left" data-aos="fade-up">
+      <h1>Karibu Tum<span class="text-danger">cathcom</span></h1>
+      <h2 class="text-white" style="font-size: 14px;">(<span class=" font-20">T</span>echnical <span class=" font-20">U</span>niversity of
+         <span class=" font-20">M</span>ombasa <span class="text-danger font-20">Cath</span>olic <span class="text-danger font-20">Com</span>munity)
+      </h2>
+      <h2>Let us join hands and spread the gospel</h2>
+      <p class="text-white">"They that hope in the Lord will renew their strength"</p>
+      <p class="text-white">ISAIAH 40:31</p>
+    </div>
+  </section><!-- End Welcome Section -->
+
+  <main id="main">
+
+    <!-- ======= About us Section ======= -->
+    <section id="what-we-do" class="what-we-do">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 id="about" class="tum-color">About us</h2>
+          <p>The Catholic Community of Technical University of Mombasa is a society of Catholics
+             who came together to proclaim the gospel among themselves and to the outside world 
+             and enhance their spiritual, social, and economic growth in line with the teachings
+              of the church.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><img style="border-radius: 50%;" src="{% static 'assets/img/image1.jpeg' %}" alt="image" width="100px"></div> 
+              <h4><a href="">OUR MISSION</a></h4>
+              <p>To enhance spirituality and self- reliance of the Catholic Community and improve 
+                the quality of their lives by establishing structures, coordinating activities and
+                 events towards these ends.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><img style="border-radius: 50%;" src="{% static 'assets/img/image2.jpeg' %}" alt="image" width="100px"></div>  
+              <h4><a href="">OUR VISION</a></h4>
+              <p>To improve unity, challenge and enable students, by the gospel of Christ and
+                 social teachings of the church, to live a spiritual, responsible, self-reliant and 
+                 economically empowered life as responsible Christians and citizens.</p>
+            </div>
+          </div>
+        </div>
+
+       <div class="row">
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><img style="border-radius: 50%;" src="{% static 'assets/img/bible1.jpeg' %}" alt="image" width="80px"></div> 
+              <h4><a href="">OUR OBJECTIVES</a></h4>
+              <ul class="list-unstyled">
+                <li>To proclaim the word of God to people.</li>
+                <li>To nature members spiritually, morally, physically, 
+                    socially, economically and intellectually.</li>
+                <li>To enlighten members on their roles in the society.</li>
+                <li>To help members realize and develop their talents positively.</li>
+                <li>Training leaders and enhancing responsibility.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box" style="width: 100%;">
+              <div class="icon"><img style="border-radius: 50%;" src="{% static 'assets/img/rosary.jpeg' %}" alt="image" width="90px"></div>
+              <h4><a href="">OUR MOTTO</a></h4>
+              <p>GROW IN CHRIST.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End About us Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="servicess" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2 class="tum-color">Activities</h2>
+          <p>These are our weekly Activities, welcome we serve the Lord our God.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="icon-box">
+              <h4><a class="p-2" href="services.html#solar-energy">Monday:</a></h4>
+              <p class="p-2">
+                5:00 – 6:45 pm – Choir Practice<br>
+		            7:00 – 7:45 pm – Holy Rosary
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="icon-box">
+              <h4><a class="p-2" href="services.html#solar-energy">Tuesday:</a></h4>
+              <p class="p-2">
+                5:00 – 7:00 PM – Holy Mass<br>
+		            <!-- (If there is no Holy Mass) 7:00 – 7:45 pm: Program as agreed by the office -->
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4 ">
+            <div class="icon-box">
+              <h4><a class="p-2" href="services.html#solar-energy">Wednesday:</a></h4>
+              <p class="p-2">
+                5:00 – 7:00 pm - CMA and CLA meetings or Talking point <br>
+                7:00 – 7:45 pm - Praise & Worship
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="icon-box">
+              <h4><a class="p-2" href="services.html#solar-energy">Thursday:</a></h4>
+              <p class="p-2">
+                5:00 – 7:00 pm – Family (Jumuia) meetings
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="icon-box">
+              <h4><a class="p-2" href="services.html#solar-energy">Friday:</a></h4>
+              <p class="p-2">
+                5:00 – 7:30 pm – Choir Practice <br>
+		            7:30 - 7:45 pm – Evening Prayers
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 mt-4">
+            <div class="icon-box">
+              <h4><a class="p-2" href="services.html#solar-energy">Monday – Friday:</a></h4>
+              <p class="p-2">
+                6:00 – 6:30 AM - Morning Devotion <br>
+                1:00 – 1:30 PM - Lunch Hour Prayer
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section --> 
+
+  </main><!-- End #main -->
+  <style>
+    .active1{
+      color: rgb(60, 9, 143);
+    }
+  </style>
+  {% endblock %}

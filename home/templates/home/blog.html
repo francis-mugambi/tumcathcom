@@ -1,0 +1,23 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block title %}{{blog.blog_title|capfirst}} {% endblock %}
+{% block metadescription %}{{blog.blog_title}}  {% endblock %}
+{% block metakeywords %}'{{blog.blog_title}} ' {% endblock %}
+
+{% block content %}
+{% autoescape off %}
+<section class="portfolio">
+    {% if blog.photo %}
+    <img src="/media/{{blog.photo}}" style="width: 100%;height: 400px;" alt="image">
+    {% endif %}
+    <div class="container px-4" style="max-width:900px ;">    
+      <h1 class="text-center text-danger pt-4 font-20">{{blog.blog_title|capfirst}}</h1><hr>    
+      <div class="row">        
+        <div class="">
+            <p>{{blog.blog_body}}</p>
+        </div>               
+      </div>  
+    </div>
+  </section> 
+{% endautoescape %}
+{% endblock %}

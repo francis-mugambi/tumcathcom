@@ -1,0 +1,440 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block title %}Tumcathcom leadership{% endblock %}
+{% block metadescription %}Tumcathcom leadership {% endblock %}
+{% block metakeywords %}'tumcathcom leadership', tum yca leadership {% endblock %}
+
+{% block content %}
+
+  <!-- ======= Team Section ======= -->  
+  </style>
+  <section id="team" class="team">
+    <div class="container">
+
+      <div class="section-title pt-4">
+        <h2>Leadership</h2>
+        <p>The leadership hierachy in Tum Catholic Community comprises of the following:</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h5 class="tum-color"><b>CHAPLAIN</b></h5>
+            <img src="{% static 'assets/img/leadership/default-profile.png' %}" alt="image" width="200px">
+            <h4>Father Richard</h4>           
+            <p>
+              He is in charge of spiritual growth of the members <br>
+              He is also in charge of guidance and counseling.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h5 class="tum-color"><b>PATRON</b></h5>
+            <img src="{% static 'assets/img/leadership/default-profile.png' %}" alt="image" width="200px">
+            <h4>Dr Egesa</h4>          
+            <p>
+              He Links the C.C with the administration. <br>              
+              He Coordinates and supervise the C.C annual elections.<br>
+              He is the Catholic Community mentor. </p>
+          </div>
+        </div>
+      </div><hr>
+
+      <div class="section-title pt-4" id="main-office">
+        <h3><b>Main Office</b></h3>        
+      </div>
+      <div class="row">       
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+        {% for leader in leaders %}
+        {% if leader.post.id == 1 %}
+            <h6 class="tum-color caps"><b>{{leader.post}}</b></h6>
+            <img src="/media/{{leader.photo}}" alt="image" width="200px">
+            <h4>{{leader.leader_name}}</h4>  
+        {% endif %}
+        {% endfor %}         
+            <p>
+              The Chairperson is responsible of Chairing all C.C meetings,
+               makes the final decision in case of controversial discussions;
+                in meetings and other activities he/she gives the final word,
+              is a signatory to C.C transactions, 
+              Ensures that all officials and committees’ function effectively and
+              Link the community with the alumni.
+            </p>
+          </div>
+        </div>
+        
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+        {% for leader in leaders %}
+        {% if leader.post.id == 2 %}
+            <h6 class="tum-color caps"><b>{{leader.post}}</b></h6>
+            <img src="/media/{{leader.photo}}" alt="image" width="200px">
+            <h4>{{leader.leader_name}}</h4>  
+        {% endif %}
+        {% endfor %}       
+            <p>
+              The Vice Chairperson Works hand in hand with the
+               chairperson in line with the duties of the Chairperson. <br>
+              Represents the chairperson in his/her absentia. <br>
+              Is the custodian of the community’s discipline <br>
+              Is in charge of welfare</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            {% for leader in leaders %}
+            {% if leader.post.id == 3 %}
+                <h6 class="tum-color caps"><b>{{leader.post}}</b></h6>
+                <img src="/media/{{leader.photo}}" alt="image" width="200px">
+                <h4>{{leader.leader_name}}</h4>  
+            {% endif %}
+            {% endfor %}            
+            <p>
+              The Secretary Writes the minutes in any meeting and retrieve if need arises, 
+              Chairs meetings in the absence of the chairperson and vice chairperson,
+              Is in charge of any incoming and outgoing correspondence in consultation with C.C officials,
+              Is a signatory to C.C transactions,
+              Is in charge of production of membership card and forwarding to SCC coordinator for distribution,
+              Keeps a record of all other members’ details,
+              Prints any communication,
+              Is in charge of information distribution of events to members and public.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Vice secretary</b></h6>
+            <img src="{% static 'assets/img/leadership/main-office/vice-sec.jpg' %}" alt="image" width="200px">
+            <h4>Lavender Khasandi</h4>           
+            <p>
+              The Vice Secretary Works hand in hand with the secretary <br>
+              He/She Assumes the duties of the Secretary in the absence of the secretary <br>
+              Manages the office stationery
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Organizing secretary</b></h6>
+            <img src="{% static 'assets/img/leadership/main-office/organizing-sec.jpg' %}" alt="image" width="200px">
+            <h4>Xavier Alaba</h4>          
+            <p>
+              The Organizing Secretary Organizes all the C.C events in collaboration with the office <br>
+              Keeps the officials and members informed about the meetings and 
+              giving information concerning the meeting <br>
+              Ensures there is an MC in events and becomes MC by default in any case</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Treasurer</b></h6>
+            <img src="{% static 'assets/img/leadership/main-office/treasurer.jpg' %}" alt="image" width="200px">
+            <h4>Benedict Opiyo</h4>            
+            <p>
+              The Secretary receives and banks the community’s finances <br>
+              Keeps the financial records of the community. <br>
+              Informs the officials and the members about the community’s financial status. <br>
+              Is a signatory to C.C transactions <br>
+              Reads the financial report at the end of semester. 
+             </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>SCC Leader</b></h6>
+            <img src="{% static 'assets/img/leadership/main-office/scc.jpg' %}" alt="image" width="200px">
+            <h4>Chris Mutinda</h4>           
+            <p>
+              The SCC have a committee comprising of all the heads of the SCCs. <br>
+              Ensures full participation of participation of SCCS in community activities <br> 
+              Is in charge and oversee all activities involving the SCCs <br>
+              Is in charge of determination of SCC membership and keep record of the same. <br>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Liturgical Leader</b></h6>
+            <img src="{% static 'assets/img/leadership/default-profile.png' %}" alt="image" width="200px">
+            <h4>Emmanuel Bahati</h4>           
+            <p>
+              The Litergical Leader have a committee consisting of 3 other members of preferably both genders. 
+              The three should organize for morning glory, lunch hour and evening prayers <br>
+              Is in charge of liturgy, In conjunction with SCC coordinator members organize alter <br>
+              Is responsible for the spiritual growth of members <br>
+              Acts as the link between choir and main office
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Library and Asset Manager</b></h6>
+            <img src="{% static 'assets/img/leadership/main-office/asset-manager2.jpg' %}" alt="image" width="200px">
+            <h4>Hilary Biwott</h4>          
+            <p>
+              The Asset manager have a committee of at least 3 members of preferably both gender <br>
+              He/She Keeps proper records of C.C equipment and ensuring their maintenance <br>
+              Is in charge of C.C entertainment <br>
+              Is in charge of C.C inventories transactions. <br>
+              With the approval of the office come up with ways of acquiring and
+               replacing equipment in their docket</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Hospitality Manager </b></h6>
+            <img src="{% static 'assets/img/leadership/default-profile.png' %}" alt="image" width="200px">
+            <h4>Evans Shivachi</h4>            
+            <p>
+              The Hospitality Manager have a committee of at least 3 members of preferably both gender <br>
+              She/He is in charge of meals and cutlery <br>
+              Is in charge of hygiene <br>
+              With the approval of the office stock necessary utensils and office decorations.
+             </p>
+          </div>
+        </div>
+
+      </div><hr>
+
+      <div class="section-title pt-4" id="choir-office">
+        <h3><b>Choir Office</b></h3>        
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Chairperson</b></h6>
+            <img src="{% static 'assets/img/leadership/choir-office/choir-chair.jpg' %}" alt="image" width="200px">
+            <h4>Sylvester Nyamai</h4>           
+            <p>
+              The Choir Chairperson is in charge of the choir and all the related groups <br>
+              Chairs all the meetings of the choir office <br>
+              Is in charge of all activities of the choir
+              as might be decided by the main office and choir office.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Secretary</b></h6>
+            <img src="{% static 'assets/img/leadership/choir-office/choir-sec.jpg' %}" alt="image" width="200px">
+            <h4>Catherine Muteti</h4>          
+            <p>
+              The Choir Secretary Communicates to office members on the agendas during meetings <br>
+              Writes minutes during choir office meetings and any other meetings involving the choir <br>
+              Updates the records of the choir members and files in coordination with voice reps <br>
+              Chair meetings in absence of the chairperson <br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>TREASURER</b></h6>
+            <img src="{% static 'assets/img/leadership/default-profile.png' %}" alt="image" width="200px">
+            <h4>Egiron Isaiah</h4>            
+            <p>
+              The Choir Treasurer is in charge of financial correspondence that relates to the choir office. <br>
+              Keeps a record of all financial statements and avail them where need arises.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Caterer/Cateress</b></h6>
+            <img src="{% static 'assets/img/leadership/default-profile.png' %}" alt="image" width="200px">
+            <h4>Ruth Maina</h4>           
+            <p>
+              The Cateress is in charge of financial correspondence that relates to the choir office. <br>
+              Keeps a record of all financial statements and avail them where need arises.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Choir Director</b></h6>
+            <img src="{% static 'assets/img/leadership/choir-office/choir-director2.jpg' %}" alt="image" width="200px">
+            <h4>Barnabas Mukuthi</h4>          
+            <p>
+              The Choir Director is in charge of choir training</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Assistant Choir Director</b></h6>
+            <img src="{% static 'assets/img/leadership/choir-office/asst-choir-director.jpg' %}" alt="image" width="200px">
+            <h4>Stephen Kalonzo</h4>            
+            <p>
+              He/She Assumes the roles of the choir director in their absence or 
+              when required to do so by the director <br>
+              Is in charge of discipline of the choir
+             </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Liturgical Dancer Coordinator</b></h6>
+            <img src="{% static 'assets/img/leadership/default-profile.png' %}" alt="image" width="200px">
+            <h4>Ludovic Mwakio</h4>           
+            <p>
+              He/She is in charge of dancing group
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Liturgical Dancer Secretary</b></h6>
+            <img src="{% static 'assets/img/leadership/default-profile.png' %}" alt="image" width="200px">
+            <h4>Purity Gichengo</h4>          
+            <p>
+              He/She is in charge of discipline of the dancers.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Praise and Worship <br> Coordinator </b></h6>
+            <img src="{% static 'assets/img/leadership/default-profile.png' %}" alt="image" width="200px">
+            <h4>Meshack Mwange</h4>            
+            <p>
+              The praise and worship coordinater is responsible of coordinating
+               the praise and worship session <br>
+              Coordinates the praise and worship team.
+             </p>
+          </div>
+        </div>
+
+      </div> <hr>
+
+      <div class="section-title pt-4" id="cma-cla">
+        <h4><b>CMA & CLA </b></h4>        
+      </div>
+      <div class="row">
+        <h5 class="text-center">Catholic Men Association (CMA)</h5>
+        <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Chairperson</b></h6>
+            <img src="{% static 'assets/img/leadership/default-profile.png' %}" alt="image" width="200px">
+            <h4>Peter Silas </h4>           
+            <p>
+              He Organizes and chairs meetings <br>
+              He is the link between the group and the main office
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Secretary</b></h6>
+            <img src="{% static 'assets/img/leadership/default-profile.png' %}" alt="image" width="200px">
+            <h4>Justin Muriuki</h4>          
+            <p>
+              He Keeps and updates the records of the membership activities <br>
+              He writes minutes in meetings held <br>
+              He is the financial custodian of the group in conjunction with the chairperson <br>
+              In conjunction with the chairperson keep a close contact with the members recruitment.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h5 class="text-center">Catholic Ladies Association (CLA)</h5>
+        <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Chairperson</b></h6>
+            <img src="{% static 'assets/img/leadership/default-profile.png' %}" alt="image" width="200px">
+            <h4>Catherine Mbithe</h4>           
+            <p>
+              She Organizes and chairs meetings <br>
+              She is the link between the group and the main office
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Secretary</b></h6>
+            <img src="{% static 'assets/img/leadership/default-profile.png' %}" alt="image" width="200px">
+            <h4>Lavine</h4>          
+            <p>
+              She KeepS and updates the records of the membership activities <br>
+              She writes minutes in meetings held <br>
+              She is the financial custodian of the group in conjunction with the chairperson <br>
+              In conjunction with the chairperson keep a close contact with the members recruitment.
+            </p>
+          </div>
+        </div>
+      </div><hr>
+
+      <div class="section-title pt-4">
+        <h4><b>Small Christian Communities Commitee  (SCC)</b></h4>        
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Chairperson</b></h6>        
+            <p>
+              The chairperson is in charge of the SCC <br>
+              Organizes and chairs all SCC meetings <br>
+              Is a default member of the SCC committee headed by the SCC Coordinator <br>
+              Makes necessary communications from the office to the SCC members
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Project Manager</b></h6>                  
+            <p>
+              The project manager is in charge of all projects within the SCC <br>
+              He/She is in charge of the finances of the SCC with conjunction with other members <br>
+              Shall be a default member of the SCC committee headed by the SCC Coordinator 
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Secretary</b></h6>                     
+            <p>
+              Keeps all records of SCC meetings, activities and membership. <br>
+              Writes minutes of the SCC meetings <br>
+              Assumes the activities of the SCC Chairperson in his absentia. <br>
+              Works hand in hand with the SCC Chairperson in ensuring proper communication <br>
+              Shall be a default member of the SCC committee headed by the SCC Coordinator
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section-title pt-4">
+        <span><b><a href="{% url 'scc-leaders' %}">Jumuiya Leaders</a></b></span>        
+      </div>
+
+    </div>
+  </section><!-- End Team Section -->
+  <style>
+    .active2{
+      color: rgb(60, 9, 143);
+    }
+  </style>
+  {% endblock %}

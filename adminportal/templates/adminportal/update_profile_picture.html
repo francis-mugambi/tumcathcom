@@ -1,0 +1,46 @@
+{% extends "portal/base.html" %}
+{% load static %}
+{% block title %}Update Profile Picture{% endblock %}
+{% block metadescription %}Update Profile Picture {% endblock %}
+{% block metakeywords %}Update Profile Picture {% endblock %}
+{% block head1 %}Update Profile Picture{% endblock %}
+{% block head2 %}Update Profie Picture{% endblock %}
+
+{% block content %}
+            
+            <div class="container-fluid">
+               
+                <!-- Row -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="card">
+                        <div class="card-body profile-card">
+                            <center class="mt-4">
+                                <span style="color: red; font-weight:bold;">{{msg}}</span>
+                                <form class="form" action="{% url 'update-profile-picture' %}" method="POST" enctype="multipart/form-data">
+                                    {% csrf_token %}                              
+                                   
+                                    <div style="font-size: 10px;">                                    
+                                        <input type="file" name="photo" accept="image/*" id="id_photo">
+                                    </div>                                                                 
+                          
+                                                                           
+                                  
+                                <img src="/media/{{user.photo}}" alt="Update Photo"
+                                    class="rounded-circl" width="200px" />
+                               
+                                <h4 class="card-title mt-2"> <button class="btn btn--main bg-info text-white" type="submit">Upload</button></h4>
+                                </form>                      
+                                
+                            </center>                                
+                        </div>
+                    </div>
+                </div>
+                    <!-- Column -->
+                    
+                    
+                </div>
+              
+            </div>
+            
+{% endblock %}

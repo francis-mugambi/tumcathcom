@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>{% block title %}{% endblock %}</title>
+  <meta content="{% block metadescription %}{% endblock %}" name="description">
+  <meta content="{% block metakeywords %}{% endblock %}" name="keywords">
+  <meta name="robots" content="{% block index %}index,follow{% endblock %}">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/tum-logo.jpg' %}" rel="icon">
+  <link href="{% static 'assets/img/tum-logo.jpg' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+
+      <div class="logo me-auto">
+        <a href="/"><img src="{% static 'assets/img/tum-logo.jpg' %}" alt="logo" width="90px" class="img-fluid"></a>
+        <h1><a class="font-1" href="/">Tum<span class="text-danger">cathcom</span></a></h1>
+        
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active1" href="/">Home</a></li>
+          <li><a class="nav-link scrollto" href="/#about">About</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'blogs' %}">Blogs</a></li>
+          <li class="dropdown"><a href="#"><span class="active2">Leadership</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto " href="/leadership/#main-office">Main Office</a></li>              
+              <li><a class="nav-link scrollto " href="/leadership/#choir-office">Choir Office</a></li>
+              <li><a class="nav-link scrollto " href="/leadership/#cma-cla">CMA & CLA</a></li>
+              <li><a class="nav-link scrollto " href="/scc-leaders/">SCC Leaders</a></li>              
+            </ul>
+          </li>                   
+          <li class="dropdown"><a href="#"><span>Gallery</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto " href="/photos/">Photos</a></li>              
+              <li><a class="nav-link scrollto " href="/videos/">Videos</a></li>              
+            </ul>
+          </li> 
+          <li class="dropdown"><a href="#"><span>Portals</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto " href="{% url 'login' %}">Member Portal</a></li>             
+              <li><a class="nav-link scrollto " href="{% url 'login-voter' %}">Voting Portal</a></li>             
+            </ul>
+          </li>              
+          <li class="dropdown"><a href="#"><span>Admin</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto " href="{% url 'login-admin' %}">Chairperson Portal</a></li>             
+              <li><a class="nav-link scrollto " href="/admin/">Office Member Portal</a></li>             
+            </ul>
+          </li>             
+          <li><a class="nav-link scrollto" href="/contacts/">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links d-flex align-items-center">        
+        <a href="https://www.facebook.com/cathcomtum/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/tum_catholic_community.1" target="_blank" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.youtube.com/@tumcathcom-stfrancisofassi6573" target="_blank" class="youtube"><i class="bi bi-youtube"></i></a>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+
+  {% block content %}
+  {% endblock %}
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-contact">
+            <h3>Tum<span class="text-danger">cathcom</span></h3>
+            <p>
+              Tom Mboya Street, <br>
+              P.O Box 90420-80100, <br>
+              Mombasa, Kenya<br>           
+              <strong>Phone:</strong> <a href="tel:+254740527047">+254740 527 047</a><br>
+              <strong>Email:</strong><a href="mailto:info@tumcathcom.com">info@tumcathcom.com</a><br>
+            </p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/leadership/">Leadership</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/photos/">Photos</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/videos/">Videos</a></li>
+              
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Quick Acess</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right scrollto"></i> <a href="/leadership/#main-office">Main Office</a></li>
+              <li><i class="bx bx-chevron-right scrollto"></i> <a href="/leadership/#choir-office">Choir Office</a></li>
+              <li><i class="bx bx-chevron-right scrollto"></i> <a href="/leadership/#cma-cla">CMA & CLA</a></li>
+              <li><i class="bx bx-chevron-right scrollto"></i> <a href="/scc-leaders/">SCC Leaders</a></li>
+              <li><i class="bx bx-chevron-right scrollto"></i> <a href="/contacts/">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center py-4">
+
+      <div class="me-md-auto text-center text-white">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Tumcathcom</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits text-success">
+    
+          Designed by <a href="/">Tumcathcom ICTS</a>
+        </div>
+      </div>
+      
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

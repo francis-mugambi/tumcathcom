@@ -1,0 +1,106 @@
+{% extends "voting/base.html" %}
+{% load static %}
+{% block title %}CMA & CLA Office Leaders {% endblock %}
+
+{% block content %}
+   
+    
+    <div class="row" id="chairperson" style="border-bottom: solid 3px rgb(224, 17, 17);">     
+    {% if user.gender == 'Male' %}
+    <div>
+        <h2 class="text-center text-danger">CMA Leaders</h2><hr>
+    </div>
+    {% for message in messages %}
+        <span style="color: red; font-weight:bold;text-align: center;">{{message}}</span>
+    {% endfor %}      
+    {% for cadidate in cma_cadidates %}
+        {% if cadidate.post.id == 1 %}       
+           <div class="col-md-4 text-center">
+               <hr><h3 class="text-center p-2 btn btn-cyan">{{cadidate.post|capfirst}}</h3>
+               <p>
+                   <p class="font-20">{{cadidate.cadidate_name|capfirst}}</p>
+                   <img src="/media/{{cadidate.cadidate_photo}}" width="200px" alt="image">
+                   <br>             
+                   <form action="{% url 'add-cma-leaders-vote' %}#chairperson" method="POST" onSubmit="if(!confirm('Are you sure you want to vote for {{cadidate.cadidate_name}} as the {{cadidate.post}}? you will not be able to vote again for this post after submiting.')){return false;}">
+                       {% csrf_token %}                                 
+                       <button class="btn btn-success m-2" type="submit" name="vote" value="{{cadidate.id}}">Vote</button>
+                   </form>
+               </p>
+            </div>  
+        {% endif %}
+        {% endfor %}       
+       
+    </div><br> <br>         
+       
+    <div class="row" id="secretary" style="border-bottom: solid 3px rgb(224, 17, 17);">  
+        {% for cadidate in cma_cadidates %}
+        {% if cadidate.post.id == 2 %}
+       
+       <div class="col-md-4 text-center" style="border-bottom: solid 3px rgb(224, 17, 17);">
+           <hr><h3 class="text-center p-2 btn btn-cyan">{{cadidate.post|capfirst}}</h3>
+           <p>
+               <p class="font-20">{{cadidate.cadidate_name|capfirst}}</p>
+               <img src="/media/{{cadidate.cadidate_photo}}" width="200px" alt="image">
+               <br>             
+               <form action="{% url 'add-cma-leaders-vote' %}#secretary" method="POST" onSubmit="if(!confirm('Are you sure you want to vote for {{cadidate.cadidate_name}} as the {{cadidate.post}}? you will not be able to vote again for this post after submiting.')){return false;}">
+                   {% csrf_token %}                                 
+                   <button class="btn btn-success m-2" type="submit" name="vote" value="{{cadidate.id}}">Vote</button>
+               </form>
+           </p>
+       </div>  
+       {% endif %}
+       {% endfor %}      
+   
+   </div><br> <br>    
+   {% else %}
+   <div>
+    <h2 class="text-center text-danger">CLA Leaders</h2><hr>
+    </div>
+    {% for message in messages %}
+        <span style="color: red; font-weight:bold;text-align: center;">{{message}}</span>
+    {% endfor %}      
+    {% for cadidate in cla_cadidates %}
+    {% if cadidate.post.id == 1 %}         
+           <div class="col-md-4 text-center">
+               <hr><h3 class="text-center p-2 btn btn-cyan">{{cadidate.post|capfirst}}</h3>
+               <p>
+                   <p class="font-20">{{cadidate.cadidate_name|capfirst}}</p>
+                   <img src="/media/{{cadidate.cadidate_photo}}" width="200px" alt="image">
+                   <br>             
+                   <form action="{% url 'add-cla-leaders-vote' %}#chairperson" method="POST" onSubmit="if(!confirm('Are you sure you want to vote for {{cadidate.cadidate_name}} as the {{cadidate.post}}? you will not be able to vote again for this post after submiting.')){return false;}">
+                       {% csrf_token %}                                 
+                       <button class="btn btn-success m-2" type="submit" name="vote" value="{{cadidate.id}}">Vote</button>
+                   </form>
+               </p>
+            </div>  
+            {% endif %}
+            {% endfor %}        
+       
+    </div><br> <br>         
+       
+    <div class="row" id="secretary" style="border-bottom: solid 3px rgb(224, 17, 17);">  
+
+        {% for cadidate in cla_cadidates %}
+        {% if cadidate.post.id == 2 %}       
+       <div class="col-md-4 text-center" style="border-bottom: solid 3px rgb(224, 17, 17);">
+           <hr><h3 class="text-center p-2 btn btn-cyan">{{cadidate.post|capfirst}}</h3>
+           <p>
+               <p class="font-20">{{cadidate.cadidate_name|capfirst}}</p>
+               <img src="/media/{{cadidate.cadidate_photo}}" width="200px" alt="image">
+               <br>             
+               <form action="{% url 'add-cla-leaders-vote' %}#secretary" method="POST" onSubmit="if(!confirm('Are you sure you want to vote for {{cadidate.cadidate_name}} as the {{cadidate.post}}? you will not be able to vote again for this post after submiting.')){return false;}">
+                   {% csrf_token %}                                 
+                   <button class="btn btn-success m-2" type="submit" name="vote" value="{{cadidate.id}}">Vote</button>
+               </form>
+           </p>
+       </div>  
+       {% endif %}
+       {% endfor %}       
+   
+   </div><br> <br>    
+   {% endif %}
+
+</body>
+</html>
+
+{% endblock %}

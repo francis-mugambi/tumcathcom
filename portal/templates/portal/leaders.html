@@ -1,0 +1,1098 @@
+{% extends "portal/base.html" %}
+{% load static %}
+{% block title %}Family leaders {% endblock %}
+{% block metadescription %}Family leaders {% endblock %}
+{% block metakeywords %}'Family leaders' {% endblock %}
+{% block head1 %}Leaders{% endblock %}
+{% block head2 %}Leaders{% endblock %}
+
+{% block content %}
+        <h3 class="text-center" style="border-bottom: solid black 2px;">{{user.family}} Leaders</h3>
+        {% if user.family == "ST. Agnes" %}
+            <div class="container-fluid">
+               
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Chairperson</h4>
+                                <h5 class="text-center">Bram Kiti</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/scc-leaders/st-agnes-chair.JPG"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The chairperson is in charge of the SCC <br>
+                                        Organizes and chairs all SCC meetings <br>
+                                        Is a default member of the SCC committee headed by the SCC Coordinator <br>
+                                        Makes necessary communications from the office to the SCC members
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Project Manager</h4>
+                                <h5 class="text-center">Brian Kyalo</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/scc-leaders/st-agnes-pm.JPG"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The project manager is in charge of all projects within the SCC <br>
+                                        He/She is in charge of the finances of the SCC with conjunction with other members <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator 
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Secretary</h4>
+                                <h5 class="text-center">Catherine Mwende</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The secretay keeps all records of SCC meetings, activities and membership. <br>
+                                        Writes minutes of the SCC meetings <br>
+                                        Assumes the activities of the SCC Chairperson in his absentia. <br>
+                                        Works hand in hand with the SCC Chairperson in ensuring proper communication <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+               
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Chairperson</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Welcome to {{user.family}} a Family full of love and support, let us join hands and spread 
+                                        the gospel
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Project manager</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Shalom brothers and sisters, Welcome to {{user.family}}, we value you as a member of this great family
+                                        feel at home and you can reach out for any assistance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Secretary</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>God bless you  all for being a member of this great family
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+<!--ST Catherine-->
+            {% elif user.family == "ST. Catherine" %}
+            <div class="container-fluid">
+               
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Chairperson</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The chairperson is in charge of the SCC <br>
+                                        Organizes and chairs all SCC meetings <br>
+                                        Is a default member of the SCC committee headed by the SCC Coordinator <br>
+                                        Makes necessary communications from the office to the SCC members
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Project Manager</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The project manager is in charge of all projects within the SCC <br>
+                                        He/She is in charge of the finances of the SCC with conjunction with other members <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator 
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Secretary</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The secretay keeps all records of SCC meetings, activities and membership. <br>
+                                        Writes minutes of the SCC meetings <br>
+                                        Assumes the activities of the SCC Chairperson in his absentia. <br>
+                                        Works hand in hand with the SCC Chairperson in ensuring proper communication <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+               
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Chairperson</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Welcome to {{user.family}} a Family full of love and support, let us join hands and spread 
+                                        the gospel
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Project manager</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Shalom brothers and sisters to {{user.family}}, we value you as a member of this great family
+                                        feel at home and you can reach out for any assistance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Secretary</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>God bless you  all for being a member of this great family
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+<!--ST Charles-->
+            {% elif user.family == "ST. Charles" %}
+            <div class="container-fluid">
+               
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Chairperson</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The chairperson is in charge of the SCC <br>
+                                        Organizes and chairs all SCC meetings <br>
+                                        Is a default member of the SCC committee headed by the SCC Coordinator <br>
+                                        Makes necessary communications from the office to the SCC members
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Project Manager</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The project manager is in charge of all projects within the SCC <br>
+                                        He/She is in charge of the finances of the SCC with conjunction with other members <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator 
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Secretary</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The secretay keeps all records of SCC meetings, activities and membership. <br>
+                                        Writes minutes of the SCC meetings <br>
+                                        Assumes the activities of the SCC Chairperson in his absentia. <br>
+                                        Works hand in hand with the SCC Chairperson in ensuring proper communication <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+               
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Chairperson</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Welcome to {{user.family}} a Family full of love and support, let us join hands and spread 
+                                        the gospel
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Project manager</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Shalom brothers and sisters, Welcome to {{user.family}}, we value you as a member of this great family
+                                        feel at home and you can reach out for any assistance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Secretary</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>God bless you  all for being a member of this great family
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+
+<!--ST. Dominic-->
+            {% elif user.family == "ST. Dominic" %}
+            <div class="container-fluid">
+               
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Chairperson</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The chairperson is in charge of the SCC <br>
+                                        Organizes and chairs all SCC meetings <br>
+                                        Is a default member of the SCC committee headed by the SCC Coordinator <br>
+                                        Makes necessary communications from the office to the SCC members
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Project Manager</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The project manager is in charge of all projects within the SCC <br>
+                                        He/She is in charge of the finances of the SCC with conjunction with other members <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator 
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Secretary</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The secretay keeps all records of SCC meetings, activities and membership. <br>
+                                        Writes minutes of the SCC meetings <br>
+                                        Assumes the activities of the SCC Chairperson in his absentia. <br>
+                                        Works hand in hand with the SCC Chairperson in ensuring proper communication <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+               
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Chairperson</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Welcome to {{user.family}} a Family full of love and support, let us join hands and spread 
+                                        the gospel
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Project manager</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Shalom brothers and sisters, Welcome to {{user.family}}, we value you as a member of this great family
+                                        feel at home and you can reach out for any assistance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Secretary</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>God bless you  all for being a member of this great family
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+<!--ST. Joseph-->
+            {% elif user.family == "ST. Joseph" %}
+            <div class="container-fluid">
+               
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Chairperson</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The chairperson is in charge of the SCC <br>
+                                        Organizes and chairs all SCC meetings <br>
+                                        Is a default member of the SCC committee headed by the SCC Coordinator <br>
+                                        Makes necessary communications from the office to the SCC members
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Project Manager</h4>
+                                <h5 class="text-center">Brian Kyalo</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The project manager is in charge of all projects within the SCC <br>
+                                        He/She is in charge of the finances of the SCC with conjunction with other members <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator 
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Secretary</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The secretay keeps all records of SCC meetings, activities and membership. <br>
+                                        Writes minutes of the SCC meetings <br>
+                                        Assumes the activities of the SCC Chairperson in his absentia. <br>
+                                        Works hand in hand with the SCC Chairperson in ensuring proper communication <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+               
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Chairperson</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Welcome to ST. Joseph a Family full of love and support, let us join hands and spread 
+                                        the gospel
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Project manager</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Shalom brothers and sisters, Welcome to {{user.family}}, we value you as a member of this great family
+                                        feel at home and you can reach out for any assistance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Secretary</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>God bless you  all for being a member of this great family
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+<!--ST. Jude-->
+            {% elif user.family == "ST. Jude" %}
+            <div class="container-fluid">
+               
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Chairperson</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The chairperson is in charge of the SCC <br>
+                                        Organizes and chairs all SCC meetings <br>
+                                        Is a default member of the SCC committee headed by the SCC Coordinator <br>
+                                        Makes necessary communications from the office to the SCC members
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Project Manager</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The project manager is in charge of all projects within the SCC <br>
+                                        He/She is in charge of the finances of the SCC with conjunction with other members <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator 
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Secretary</h4>
+                                <h5 class="text-center">Catherine Mwende</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The secretay keeps all records of SCC meetings, activities and membership. <br>
+                                        Writes minutes of the SCC meetings <br>
+                                        Assumes the activities of the SCC Chairperson in his absentia. <br>
+                                        Works hand in hand with the SCC Chairperson in ensuring proper communication <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+               
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Chairperson</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Welcome to ST. Jude a Family full of love and support, let us join hands and spread 
+                                        the gospel
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Project manager</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Shalom brothers and sisters, Welcome to ST. Jude, we value you as a member of this great family
+                                        feel at home and you can reach out for any assistance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Secretary</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>God bless you  all for being a member of this great family
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+<!--ST. Lucy-->     
+            {% elif user.family == "ST. Lucy" %}
+            <div class="container-fluid">
+            
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Chairperson</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The chairperson is in charge of the SCC <br>
+                                        Organizes and chairs all SCC meetings <br>
+                                        Is a default member of the SCC committee headed by the SCC Coordinator <br>
+                                        Makes necessary communications from the office to the SCC members
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Project Manager</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The project manager is in charge of all projects within the SCC <br>
+                                        He/She is in charge of the finances of the SCC with conjunction with other members <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator 
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Secretary</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The secretay keeps all records of SCC meetings, activities and membership. <br>
+                                        Writes minutes of the SCC meetings <br>
+                                        Assumes the activities of the SCC Chairperson in his absentia. <br>
+                                        Works hand in hand with the SCC Chairperson in ensuring proper communication <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+            
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Chairperson</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Welcome to {{user.family}} a Family full of love and support, let us join hands and spread 
+                                        the gospel
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Project manager</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Shalom brothers and sisters, Welcome to {{user.family}}, we value you as a member of this great family
+                                        feel at home and you can reach out for any assistance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Secretary</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>God bless you  all for being a member of this great family
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+
+<!--ST. Michael-->
+            {% elif user.family == "ST. Michael" %}
+            <div class="container-fluid">
+               
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Chairperson</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The chairperson is in charge of the SCC <br>
+                                        Organizes and chairs all SCC meetings <br>
+                                        Is a default member of the SCC committee headed by the SCC Coordinator <br>
+                                        Makes necessary communications from the office to the SCC members
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Project Manager</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The project manager is in charge of all projects within the SCC <br>
+                                        He/She is in charge of the finances of the SCC with conjunction with other members <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator 
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Secretary</h4>
+                                <h5 class="text-center">John Doe</h5>
+                                <div class="text-center"><img src="/static/assets/img/leadership/default-profile.png"
+                                style="border-radius: 20%;" alt="profile image" width="200px"></div>
+                                <div>                                   
+                                    <p>
+                                        The secretay keeps all records of SCC meetings, activities and membership. <br>
+                                        Writes minutes of the SCC meetings <br>
+                                        Assumes the activities of the SCC Chairperson in his absentia. <br>
+                                        Works hand in hand with the SCC Chairperson in ensuring proper communication <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+               
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Chairperson</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Welcome to {{user.family}} a Family full of love and support, let us join hands and spread 
+                                        the gospel
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Project manager</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>Shalom brothers and sisters, Welcome to {{user.family}}, we value you as a member of this great family
+                                        feel at home and you can reach out for any assistance.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex">
+                                    <h4 class="card-title col-md-10 mb-md-0 mb-3 align-self-center text-success">Message from the Secretary</h4>
+                                    
+                                </div>
+                                <div class="table-responsive mt-5">
+                                    <p>God bless you  all for being a member of this great family
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+<!--No Family-->
+            {% else %}
+            <div class="container-fluid">
+               
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Chairperson</h4>
+                               
+                                <div>                                   
+                                    <p>
+                                        The chairperson is in charge of the SCC <br>
+                                        Organizes and chairs all SCC meetings <br>
+                                        Is a default member of the SCC committee headed by the SCC Coordinator <br>
+                                        Makes necessary communications from the office to the SCC members
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Project Manager</h4>
+                                                       
+                                    <p>
+                                        The project manager is in charge of all projects within the SCC <br>
+                                        He/She is in charge of the finances of the SCC with conjunction with other members <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator 
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                    
+                    <!-- Column -->
+                    <div class="col-sm-4">
+                        <div class="card">
+                            <div class="card-body ">
+                                <h4 class="card-title text-center text-danger">Secretary</h4>
+                                                      
+                                    <p>
+                                        The secretay keeps all records of SCC meetings, activities and membership. <br>
+                                        Writes minutes of the SCC meetings <br>
+                                        Assumes the activities of the SCC Chairperson in his absentia. <br>
+                                        Works hand in hand with the SCC Chairperson in ensuring proper communication <br>
+                                        Shall be a default member of the SCC committee headed by the SCC Coordinator
+                                    </p>
+                                </div>
+                                <span class="text-info"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>             
+                                
+            </div>
+
+        {% endif %}
+            
+{% endblock %}

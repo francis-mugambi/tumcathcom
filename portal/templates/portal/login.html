@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Tumcathcom Portal</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="robots" content="index,follow">
+
+    <!-- Favicon icon -->
+ 
+    <!-- Custom CSS -->
+    <link href="/static/students/assets/plugins/chartist/dist/chartist.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/static/students/students-html/css/style.min.css" rel="stylesheet">
+   
+</head>
+
+<body style="max-width: 700px; margin: auto;">
+    
+    
+
+            <div class="container-fluid">
+               
+                <!-- Row -->
+                <div class="row">
+                    
+                   <div class="text-center"><img src="/static/assets/img/tum-logo.jpg" alt="Avatar" class="avatar" 
+                    style="width: 140px;height: 100px; margin-top: 20px; margin-bottom: 20px;"><br> </div>
+                   <h1 style="text-align: center;">Login</h1>
+                   <span style="font-size: 15px; text-align: center;"><a href="/portal/signup/">Don't have an account? create here</a></span> <br>
+                    <span style="color: red; font-weight:bold; text-align: center;margin-top: 20px;"></span>
+
+                    <span style="color: red; font-weight:bold;margin-bottom: 20px;text-align: center;">{{msg1}}</span>
+                    {% for message in messages %}
+                    <span style="color: red; font-weight:bold;margin-bottom: 20px; text-align: center;">{{message}}</span>
+                    {% endfor %}
+                    
+                </div>
+                    <!-- Column -->
+                    <!-- Column -->
+                    <div class="row">
+                    <div class="col-lg-12 col-xlg-12 col-md-12">
+                        <div class="card">
+                            <div class="card-body">                               
+                                <form class="form-horizontal form-material mx-2" action="" method="POST">
+                                {% csrf_token %}
+                                
+                                <div class="row">
+                                    
+                                    
+                                <div class="row">                            
+                                    <div class="col-md-12 form-group">
+                                        <label for="example-email" class="">Email <span class="text-danger">*</span></label>
+                                        <div class="">
+                                            <input type="email" name ="email"
+                                                class="form-control ps-0 form-control-line"
+                                                id="example-email" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <label class="mb-0">Password <span class="text-danger">*</span></label>
+                                        <div class="">
+                                            <input type="password" name = "password"
+                                                class="form-control ps-0 form-control-line" required>
+                                        </div>
+                                    </div>                            
+                                </div>                                
+
+                                    
+                                    <div class="form-group row">
+                                        <div class="col-6 d-flex">                                            
+                                            <button type="submit" style="background-color: rgb(131, 10, 10);"
+                                             class="btn mx-auto mx-md-0 text-white">Login</button>                                       
+                                                                                        
+                                        </div>
+                                        <div class="col-6 d-flex">                                         
+                                        
+                                             <span type="button"
+                                             class="btn mx-auto mx-md-0 text-white bg-success"><a class="text-white" href="/">Cancel</a></span>                                                                                        
+                                        </div>
+                                    </div>
+                                
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+              
+            </div>
+            <footer class="footer text-center">
+                © 2023 Tumcathcom member portal<hr>
+                
+            </footer>
+                    
+
+            
+           
+            <!-- End footer -->
+            
+        </div>
+        
+    </div>
+   
+    <script src="/static/students/assets/plugins/jquery/dist/jquery.min.js"></script>    
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="/static/students/assets/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/students/students-html/js/app-style-switcher.js"></script>
+    <!--Wave Effects -->
+    <script src="/static/students/students-html/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="/static/students/students-html/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="/static/students/students-html/js/custom.js"></script>
+</body>
+
+</html>

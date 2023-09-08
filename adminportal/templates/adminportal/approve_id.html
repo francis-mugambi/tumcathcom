@@ -1,0 +1,109 @@
+{%  extends 'adminportal/base.html' %}   
+{% load static %}
+{% block title %}Approve ids{% endblock %}
+
+
+{% block content %} 
+<div class="page-wrapper">
+        
+    <div class="page-breadcrumb">
+      <div class="row">
+        <div class="col-12 d-flex no-block align-items-center">
+          <h4 class="page-title">Approve ids</h4>
+          <div class="ms-auto text-end">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#"></a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <span style="color: red; font-weight:bold;">{{msg}}</span>  
+    </div><hr>
+{% for user in users %}
+<div style="overflow-x: auto;" class="row">
+    <div class="row text-center" style="width: 350px;height: 210px; background-color: rgb(83, 7, 7); border-radius: 10px; margin-left: 20px; color: antiquewhite;">
+        
+        <div class="column col-6">
+            <img src="/media/photos/tum-logo.jpg" alt="image"
+            class="rounded-circle" style="float: left; width: 50px; margin: 10px 5px 5px 3px;">
+            <p style="font-size: 9px; margin-top: 15px;">Technical University <br> of Mombasa</p>
+            <!-- <span style="font-size: 9px; margin-top: opx;">Full Name:</span> <br>
+            <span style="font-size: 9px; margin-left: 15px;">Francis Mugambi Gikunju</span> -->
+        </div>
+        <div class="column col-6">
+            <p style="font-size: 9px; margin-top: 15px;">Tumcathcom Membership   Card</p>
+            <p style="font-size: 9px; margin-top: 0px;">Serial Number: {{user.id_number}}{{user.id}}</p>
+    
+        </div>
+        <div class="column col-6">
+            <img src="/media/{{user.photo}}" alt="image"
+            class="" style="float: left; width: 80px;height: 100px; margin: 10px 5px 5px 3px;">
+            <p style="font-size: 9px; margin-top: 15px;">Id Number: <br>{{user.id_number}} </p>
+        </div>
+        <div class="column col-6">
+                   
+            <p style="font-size: 9px; margin-top: 15px;">Full Name: <br>
+                {{user.first_name}} {{user.last_name}} {{user.sir_name}}
+            </p>  
+            <div style="float: left;margin-left: -70px;">
+                <span style="font-size: 9px;">Reg No:</span>
+                <span style="font-size: 9px;">{{user.regno}}</span>
+            </div><br>
+            <div style="float: left; margin-left: -70px;">
+                <span style="font-size: 9px;">Family:</span>
+                <span style="font-size: 9px;">{{user.family}}</span>
+            </div>        
+        </div>  
+    </div>
+    <div class="row text-center mt-1" 
+            style="width: 350px;height: 210px; background-color:  rgb(83, 7, 7); color: antiquewhite; border-radius: 10px; margin-left: 20px;">
+       
+        <div class="col-12 pt-3">    
+            <span style="font-size: 9px;;">This is a property of Tumcathcom assigned to {{user.first_name}} <br> 
+                {{user.last_name}} {{user.sir_name}} as an identity for church matters</span><br>
+            <!-- <span style="font-size: 9px; margin-bottom: 5px;">{{user.department}}</span>            -->
+        </div>
+        <div class="col-12">
+            <span style="font-size: 9px;">{{user.department|upper}}</span><br>
+            <span style="font-size: 9px;">{{user.course_name}}</span>
+        </div>
+            
+        <div class="col-12">
+            <p style="font-size: 9px;">
+            <<<< VALID: 2023 - 2027 >>>> <br>
+            <<<< {{user.id}} >>>> <<<<{{user.id_number}}>>> <<<< {{user.regno}} >>>> <br>       
+            <<<< {{user.first_name}} >>>> <<<< {{user.last_name}} >>>> <<<< {{user.sir_name}} >>>>
+            </p>
+        </div>
+    </div><br>
+    </div>
+<br><div class="mt-4">
+    <span class="btn btn-danger mx-4">
+        <a class="text-white" href="{% url 'view-member' user.id %}">View Profile</a></span>      
+    
+        {% if user.is_approved == False and user.has_request == True %}
+    <span class="btn btn-info mx-4"><a onclick="if(!confirm('Are you sure that you want to approve {{user.first_name}} {{user.sir_name}} is a member of Tumcathcom?')){return false;}" class="text-white" href="{% url 'approve' user.id %}">Approve</a></span>    
+        <span class=" mx-1">Status:</span>
+        <span class="text-danger">Not Approved</span>
+        {% elif user.is_approved == False and user.has_request == False %}            
+        <span class=" mx-1">Status:</span>
+        <span class="text-danger">Not Approved</span>
+        {% else %}  
+        <span class="btn btn-info mx-4"><a class="text-white" href="{% url 'print-card' user.id %}" target="_blank">Print Id</a></span>    
+        <span class="btn btn-info mx-4"><a onclick="if(!confirm('Are you sure that you want to unapprove this member?')){return false;}" class="text-white" href="{% url 'unapprove' user.id %}">Unapprove</a></span>    
+        <span class=" mx-1">Status:</span>
+        <span class="text-danger">Approved</span>
+        {% endif %}
+
+</div><hr><br>
+{% endfor %}
+</div>
+
+
+
+{% endblock %}

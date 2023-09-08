@@ -1,0 +1,70 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block title %}Tumcathcom Jumuiya leadership{% endblock %}
+{% block metadescription %}Tumcathcom Jumuiya leadership{% endblock %}
+{% block metakeywords %}'tumcathcom scc, 'tumcathcom scc leaders' {% endblock %}
+
+{% block content %}
+
+  <!-- ======= Team Section ======= -->
+  <section id="team" class="team">
+    <div class="container">
+
+      <div class="section-title pt-4">
+        <h2>SCC Leaders</h2>
+        <p>Tum Catholic Community comprises of 8 (eight) Families with 3 (three) leaders per Jumuiya:</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Chairperson</b></h6>        
+            <p>
+              The chairperson is in charge of the SCC <br>
+              Organizes and chairs all SCC meetings <br>
+              Is a default member of the SCC committee headed by the SCC Coordinator <br>
+              Makes necessary communications from the office to the SCC members
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Project Manager</b></h6>                  
+            <p>
+              The project manager is in charge of all projects within the SCC <br>
+              He/She is in charge of the finances of the SCC with conjunction with other members <br>
+              Shall be a default member of the SCC committee headed by the SCC Coordinator 
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+          <div class="member">
+            <h6 class="tum-color caps"><b>Secretary</b></h6>                     
+            <p>
+              Keeps all records of SCC meetings, activities and membership. <br>
+              Writes minutes of the SCC meetings <br>
+              Assumes the activities of the SCC Chairperson in his absentia. <br>
+              Works hand in hand with the SCC Chairperson in ensuring proper communication <br>
+              Shall be a default member of the SCC committee headed by the SCC Coordinator
+            </p>
+          </div>
+        </div>
+      </div> <hr>
+      <div class="row">
+        {% for leader in leaders %}
+        <div class="col-lg-4 col-md-6 "style="border-bottom: 1px red solid;">
+          <div class="member">
+            <h3 class="bg-success text-white mb-4">{{leader.family}}</h3>
+            <h6 class="tum-color caps"><b>{{leader.post}}</b></h6>
+            <img src="/media/{{leader.photo}}" alt="profile image" width="200px">
+            <h4>{{leader.leader_name}}</h4>           
+            
+          </div>
+        </div>
+        {% endfor %}
+      </div>      
+      
+    </div>
+  </section><!-- End Team Section -->
+
+  {% endblock %}

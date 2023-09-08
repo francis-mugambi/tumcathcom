@@ -1,0 +1,57 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Login</title>
+  <meta name="robots" content="no-index,no-follow">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/tum-logo.jpg' %}" rel="icon">
+  <link href="{% static 'assets/img/tum-logo.jpg' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" href="{% static 'assets/css/create-account-login.css' %}">
+</head>
+<body class="body" style="background-image: url('/static/assets/img/download.jpg')!important">
+<div id="id01" class="modol mt-4">
+  <form class="modal-content1 animate" action="{% url 'login-voter' %}" method="post" autocomplete="on" 
+  style="background-color:rgba(142, 145, 144, 0.5); color: rgb(216, 9, 9);border: solid green 2px;">
+    {% csrf_token %}
+    <div class="imgcontainer">
+      <!-- <h3>Student Portal</h3> -->
+      <!-- <span title="Close Modal"><a style="font-size: 40px; float: right; margin: -20px 10px 0 0; text-decoration: none; font-weight:bold;" href="/">&times;</a></span> -->
+      
+      <img src="{% static 'assets/img/tum-logo.jpg' %}" alt="Avatar" class="avatar"><br>
+      <span style="color: red; font-weight:bold;">{{msg1}}</span>
+      {% for message in messages %}
+      <span style="color: red; font-weight:bold;">{{message}}</span>
+      {% endfor %}
+    </div>
+
+    <div class="container">
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="email" required autofocus="on" >
+
+      <label for="password"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+        
+      <button type="submit">Login</button>
+      
+    </div>
+
+    <div class="container" style="background-color:rgba(241, 229, 241, 0.2); border-radius: 20px;">
+      <button type="button" class="cancelbtn"><a style="text-decoration:none; color: white;" href="/">Cancel</a></button>
+      
+    </div>
+  </form>
+</div>
+</body>
+</html>
